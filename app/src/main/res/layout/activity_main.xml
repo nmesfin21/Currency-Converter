@@ -6,13 +6,66 @@
     android:layout_height="match_parent"
     tools:context="com.natty.currencyconverter.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:id="@+id/mainRelativeLayout"
+        android:layout_width="304dp"
+        android:layout_height="437dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
 
+        <TextView
+            android:id="@+id/greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Currency Converter"
+            android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/amoutText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/greeting"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp"
+            android:ems="10"
+            android:hint="Enter Amount"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/convertButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rateText"
+            android:layout_alignStart="@+id/rateText"
+            android:layout_below="@+id/rateText"
+            android:layout_marginTop="38dp"
+            android:onClick="convertCurrency"
+            android:text="Convert" />
+
+        <EditText
+            android:id="@+id/rateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/amoutText"
+            android:layout_alignStart="@+id/amoutText"
+            android:layout_below="@+id/amoutText"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="Enter Rate"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/resultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/convertButton"
+            android:layout_alignStart="@+id/convertButton"
+            android:layout_below="@+id/convertButton"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="result"
+            android:inputType="textPersonName" />
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
